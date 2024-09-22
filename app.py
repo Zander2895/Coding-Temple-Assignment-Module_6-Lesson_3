@@ -166,8 +166,8 @@ def get_member_workouts(member_id):
     sessions = WorkoutSession.query.filter_by(member_id=member_id).all()
     return workouts_schema.jsonify(sessions), 200
 
-# Initialize the database and create tables (uncomment to create tables initially)
-# db.create_all()
+# Initialize the database and create tables
+db.create_all()
 
 # Run the Flask app
 if __name__ == '__main__':
